@@ -25,20 +25,20 @@ body {
 
 .header h1 {
     font-family: 'Pops08', sans-serif;
-    font-size: 15vw;
+    font-size: 5vw;
     text-align: center;
 }
 
 .header {
     text-align: center;
-    border-bottom: none;
+    /* border-bottom: 0.1vh solid #E5E5EA; */
 }
 
 .nav-main {
   display: flex;
   justify-content: center;
   /* gap: 2rem; */
-  border-bottom: 0.1vh solid #E5E5EA;
+  /* border-bottom: 0.1vh solid #E5E5EA; */
 }
 
 .nav-main a {
@@ -52,11 +52,12 @@ body {
   background: #E5E5EA;
 }
 
-@media (min-width: 1000px) {
+@media (max-width: 1000px) {
     .header {
-        border-bottom: 0.1vh solid #E5E5EA;
+        border-bottom: none;
     }
     .header h1 {
-        font-size: 5vw;
+        font-size: 15vw;
     }
 }
+
