@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hennabymarwa - Service Information</title>
+    <style>
+        @font-face {
+            font-family: 'Pops08';
+            src: url('../fonts/pops_08_REGULAR.ttf') format('truetype');
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><g fill="none" stroke="%23e8b4e8" stroke-width="2" opacity="0.3"><path d="M50 200c0-50 40-90 90-90s90 40 90 90-40 90-90 90-90-40-90-90z"/><path d="M140 150c10-5 20-5 30 0"/><path d="M140 170c10 5 20 5 30 0"/><path d="M140 190c10-5 20-5 30 0"/><path d="M120 180l-10-20"/><path d="M220 180l10-20"/><path d="M130 210l-5 15"/><path d="M210 210l5 15"/></g></svg>') no-repeat;
+            background-size: 300px 300px;
+            background-position: -50px -50px;
+            pointer-events: none;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .brand-name {
+            font-size: 48px;
+            font-weight: 300;
+            font-style: italic;
+            color: #333;
+            margin-bottom: 10px;
+            font-family: 'Pops08', sans-serif;
+        }
+
+        .subtitle {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section {
+            margin-bottom: 35px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .section-subtitle {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .policy-text {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .price-name {
+            font-size: 16px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-amount {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #d8a8d8, #c899c8);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: left;
+            margin-top: 30px;
+        }
+
+        .contact-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .contact-info {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .highlight-box {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #d8a8d8;
+        }
+
+        .length-guide {
+            margin: 30px 0;
+        }
+
+        .length-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .length-number {
+            width: 30px;
+            height: 30px;
+            background: #d8a8d8;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        .diagram {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .diagram svg {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .hand-icon, .feet-icon {
+            width: 80px;
+            height: 80px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                padding: 25px;
+            }
+            
+            .brand-name {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Policy Card -->
+        <div class="card">
+            <div class="header">
+                <h1 class="brand-name">HENNA BY MARWA</h1>
+                <h2 class="subtitle">Policy</h2>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Location:</div>
+                <div class="policy-text">DON MILLS & OVERLEA (EAST YORK)</div>
+                <div class="policy-text">THE ADDRESS WILL BE INCLUDED IN YOUR CONFIRMATION EMAIL/TEXT ONCE AN APPOINTMENT IS BOOKED.</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Terms & Conditions</div>
+                <div class="policy-text">(PLEASE READ CAREFULLY BEFORE BOOKING)</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Deposit:</div>
+                <div class="policy-text">A NON-REFUNDABLE DEPOSIT OF $15 IS REQUIRED TO BOOK AN APPOINTMENT AND SECURE A SPOT. ONCE A DEPOSIT IS MADE, YOU HAVE AGREED TO THE TERMS AND CONDITIONS.</div>
+                <div class="policy-text"><strong>NO DEPOSIT, NO APPOINTMENT!</strong></div>
+                <div class="policy-text">(I WILL ONLY REFUND YOUR DEPOSIT IF I CANCEL ON YOU BECAUSE OF A PERSONAL URGENT MATTER)</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Late Arrivals and No Show:</div>
+                <div class="policy-text">MARWA PROVIDES A 15-MINUTE GRACE PERIOD FOR ALL SCHEDULED APPOINTMENTS. PLEASE REACH OUT AND NOTIFY ME IF YOU WILL BE ARRIVING LATE FOR YOUR APPOINTMENT. ANY ARRIVAL PAST THE 15-MINUTE GRACE PERIOD WILL NOT BE ACCEPTED.</div>
+                
+                <div class="highlight-box">
+                    <div class="policy-text">GUEST WHO REFUSES TO PROVIDE NOTICE FOR CANCELING THEIR APPOINTMENT AND CHOOSE TO <strong>NO-SHOW</strong> WILL BE BLOCKED FROM FUTURE BOOKINGS.</div>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <div class="contact-title">Contact:</div>
+                <div class="contact-info">DM: _HENNABYMARWA</div>
+                <div class="contact-info">EMAIL: MARWA_SALIH@OUTLOOK.COM</div>
+            </div>
+        </div>
+
+        <!-- Individual Hands Price List -->
+        <div class="card">
+            <div class="header">
+                <h1 class="brand-name">HENNA BY MARWA</h1>
+                <h2 class="subtitle">Price List</h2>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Hands</div>
+                <div class="section-subtitle">(Please note these prices are per hand per side)</div>
+                
+                <div class="price-item">
+                    <span class="price-name">Simple Design</span>
+                    <span class="price-amount">$10</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">Medium Design</span>
+                    <span class="price-amount">$20</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">Intricate Design</span>
+                    <span class="price-amount">$30</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">Full Hand Design</span>
+                    <span class="price-amount">$40</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">Feet</div>
+                <div class="section-subtitle">(Please note these prices are per feet)</div>
+                
+                <div class="price-item">
+                    <span class="price-name">Simple Design</span>
+                    <span class="price-amount">$15</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">Medium Design</span>
+                    <span class="price-amount">$25</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">Intricate Design</span>
+                    <span class="price-amount">$35</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">Full Feet Design</span>
+                    <span class="price-amount">$45</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Combo Price List -->
+        <div class="card">
+            <div class="header">
+                <h1 class="brand-name">HENNA BY MARWA</h1>
+                <h2 class="subtitle">Price List</h2>
+            </div>
+
+            <div class="section">
+
+                <div class="section-title">Hands & Feet Combo</div>
+                <div class="section-subtitle">(Please note these prices are not for bridal)</div>
+                
+                <div class="price-item">
+                    <span class="price-name">Simple Design</span>
+                    <span class="price-amount">$60</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">Medium Design</span>
+                    <span class="price-amount">$70</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">Intricate Design</span>
+                    <span class="price-amount">$80</span>
+                </div>
+                <div class="price-item">
+                    <span class="price-name">Full Hand & Feet Design</span>
+                    <span class="price-amount">$90</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Hands Length Guide -->
+        <div class="card">
+            <div class="header">
+                <h1 class="brand-name">HENNA BY MARWA</h1>
+                <h2 class="subtitle">Hands Length</h2>
+            </div>
+
+            <div class="length-guide">
+                <div class="length-item">
+                    <div class="length-number">1</div>
+                    <span>SIMPLE DESIGN - UP TO WRIST</span>
+                </div>
+                <div class="length-item">
+                    <div class="length-number">2</div>
+                    <span>MEDIUM DESIGN - UP TO 2ND ABOVE THE WRIST</span>
+                </div>
+                <div class="length-item">
+                    <div class="length-number">3</div>
+                    <span>INTRICATE DESIGN - UP TO MID ARM</span>
+                </div>
+                <div class="length-item">
+                    <div class="length-number">4</div>
+                    <span>FULL HAND DESIGN - UP TO THE ELBOW</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feet Length Guide -->
+        <div class="card">
+            <div class="header">
+                <h1 class="brand-name">HENNA BY MARWA</h1>
+                <h2 class="subtitle">Feet Length</h2>
+            </div>
+
+            <div class="length-guide">
+                <div class="length-item">
+                    <div class="length-number">1</div>
+                    <span>SIMPLE DESIGN - UP TO ANKLE</span>
+                </div>
+                <div class="length-item">
+                    <div class="length-number">2</div>
+                    <span>MEDIUM DESIGN - ABOVE THE ANKLE</span>
+                </div>
+                <div class="length-item">
+                    <div class="length-number">3</div>
+                    <span>INTRICATE DESIGN - HALF KNEE</span>
+                </div>
+                <div class="length-item">
+                    <div class="length-number">4</div>
+                    <span>FULL FEET DESIGN - BELOW KNEE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
