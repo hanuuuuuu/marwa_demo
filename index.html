@@ -1,30 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Henna by Marwa</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="stylesheet" href="styles/styles2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amara Henna - Artistry in Every Design</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <section>
-        <img src="marwa1-removebg-preview.png" class="corner-left" alt="">
-        <img src="marwa2-removebg-preview.png" class="corner-right" alt="">
-    </section>
-    <section class="header">
-        <h1>Henna by Marwa</h1>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="henna-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <ul class="nav-left">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+            <a href="#home" class="logo">Henna by Marwa</a>
+            <ul class="nav-right">
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#booking">Booking</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Artistry in Every Design</h1>
+                    <p class="tagline">Transform your skin into a canvas of beautiful, intricate henna art that tells your unique story.</p>
+                    <a href="#booking" class="cta-button">Book Your Session</a>
+                </div>
+                <div class="hero-image">
+                    <img src="photos/bridal3.jpg" alt="Beautiful henna design on hands" loading="lazy">
+                </div>
+            </div>
+        </div>
     </section>
 
-    
-    <section class="nav-main">
-        <a href="/policy/index.html">POLICY</a>
-        <!-- Calendly link widget begin -->
-        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/hennamarwa09/consultation'});return false;">BOOK WITH ME</a>
-        <!-- Calendly link widget end -->
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Design Gallery</h2>
+                <p>Explore our collection of intricate henna designs, from traditional patterns to modern artistic expressions.</p>
+            </div>
+            
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Designs</button>
+                <button class="filter-btn" data-filter="bridal">Bridal</button>
+                <button class="filter-btn" data-filter="traditional">Traditional</button>
+                <button class="filter-btn" data-filter="modern">Modern</button>
+                <button class="filter-btn" data-filter="finger">Finger Art</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="bridal">
+                    <img src="photos/bridal1.jpeg" alt="Bridal henna design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="traditional">
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0101ba6fe65?w=400&h=400&fit=crop&crop=center" alt="Traditional henna pattern" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="modern">
+                    <img src="https://images.unsplash.com/photo-1570821101579-b63b8ba0e8cf?w=400&h=400&fit=crop&crop=center" alt="Modern henna art" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="finger">
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0101ba6fe65?w=400&h=400&fit=crop&crop=center" alt="Finger henna design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="bridal">
+                    <img src="photos/bridal2.jpeg" alt="Elaborate bridal henna" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="traditional">
+                    <img src="https://images.unsplash.com/photo-1570821101579-b63b8ba0e8cf?w=400&h=400&fit=crop&crop=center" alt="Traditional mandala design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <script src="scripts/script.js"></script>
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="section-title">
+                <h2>Book Your Session</h2>
+                <p>Ready to get your perfect henna design? Fill out the form below and we'll get back to you shortly.</p>
+            </div>
+            
+            <div class="booking-content">
+                <div class="booking-form">
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="design">Design Type</label>
+                            <select id="design" name="design" required>
+                                <option value="">Select Design Type</option>
+                                <option value="bridal">Bridal Package</option>
+                                <option value="traditional">Traditional Design</option>
+                                <option value="modern">Modern Art</option>
+                                <option value="finger">Finger Design</option>
+                                <option value="custom">Custom Design</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Special Requests</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your vision..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Book Now</button>
+                    </form>
+                </div>
+                <div class="booking-info">
+                    <h3>What to Expect</h3>
+                    <div class="booking-steps">
+                        <div class="step">
+                            <i class="fas fa-calendar-check"></i>
+                            <h4>1. Schedule</h4>
+                            <p>Choose your preferred date and time for the session.</p>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-palette"></i>
+                            <h4>2. Design</h4>
+                            <p>We'll discuss your design preferences and create something unique.</p>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <h4>3. Application</h4>
+                            <p>Relax while we carefully apply your beautiful henna design.</p>
+                        </div>
+                        <div class="step">
+                            <i class="fas fa-star"></i>
+                            <h4>4. Aftercare</h4>
+                            <p>Get tips on how to maintain your henna for the best results.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Meet Amara</h3>
+                    <p>With over 8 years of experience in the art of henna, I've dedicated my life to preserving this ancient tradition while adding my own contemporary touch. My journey began in my grandmother's kitchen, learning the sacred recipes and techniques passed down through generations.</p>
+                    <p>Today, I specialize in creating personalized henna experiences that honor both traditional artistry and modern aesthetics. Each design is carefully crafted to reflect your unique story and style.</p>
+                    <p>I believe that henna is more than just body art – it's a celebration of culture, beauty, and personal expression. Let me help you create something truly special.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0101ba6fe65?w=500&h=400&fit=crop&crop=center" alt="Henna artist at work" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your henna journey? Reach out and let's create something beautiful together.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(555) 123-4567</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>hello@amarahenna.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Brooklyn, NY 11201</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Mon-Sat: 10AM-7PM</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Contact Form</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Henna by Amara. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts/script.js"></script> 
 </body>
 </html>
