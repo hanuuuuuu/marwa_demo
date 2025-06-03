@@ -81,15 +81,25 @@ body {
 }
 
 /* Navigation */
+.navbar.hide {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(255, 248, 220, 0.95);
+    /* background: rgba(255, 248, 220, 0.95); */
+    background: rgba(255, 255, 255, 0.05); /* super light transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    box-shadow: none; /* optional: removes shadow */
     backdrop-filter: blur(10px);
     z-index: 1000;
     padding: 1rem 0;
     transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
 .navbar.scrolled {
@@ -154,15 +164,16 @@ body {
     width: 100%;
 }
 
-.nav-left a:hover, .nav-right a:hover {
+/* .nav-left a:hover, .nav-right a:hover {
     color: var(--primary-color);
-}
+} */
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
     padding: 5px;
+    margin-left: auto;
 }
 
 .hamburger span {
@@ -248,13 +259,38 @@ section.visible {
 }
 
 /* Hero Section */
+
 .hero {
-    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(205, 133, 63, 0.1) 100%);
-    position: relative;
-    overflow: hidden;
+  background: url('/photos/bridal3.jpg') center center / cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* Optional dark overlay for readability */
+  z-index: 1;
+}
+
+/* .hero {
+    background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(205, 133, 63, 0.1) 100%);
+    position: relative;
+    overflow: hidden;
+} */
+
+/* .hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -263,16 +299,16 @@ section.visible {
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="henna" patternUnits="userSpaceOnUse" width="50" height="50"><circle cx="25" cy="25" r="2" fill="%23DAA520" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23henna)"/></svg>');
     opacity: 0.3;
-}
+} */
 
-.hero-content {
+/* .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
     position: relative;
     z-index: 2;
-}
+} */
 
 .hero-text h1 {
     font-family: 'Playfair Display', serif;
@@ -641,7 +677,6 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
-
 
 /* Responsive Design */
 @media (max-width: 1000px) {
